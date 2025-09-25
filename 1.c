@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int maiorElemento(int matriz[4][4]) {
+    int maior = matriz[0][0];
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            if (matriz[i][j] > maior) {
+                maior = matriz[i][j];
+            }
+        }
+    }
+    return maior;
+}
+
+int main() {
+    int matriz[4][4] = {
+        {1, 5, 3, 7},
+        {4, 8, 2, 6},
+        {9, 0, 11, 10},
+        {12, 13, 14, 15}
+    };
+    printf("Maior elemento: %d\n", maiorElemento(matriz));
+    return 0;
+}
